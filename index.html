@@ -10,27 +10,25 @@
 <body>
     
 
-    <div class="main-container">
-        <div class="container">
-            <div class="formulario-login">
-                <form action="" method="">
-
-                    <div class="container">
-                      <label for="email">Email</label>
-                      <input type="text" placeholder="Escribe tu email" name="email" required>
-                  
-                      <label for="contraseña">contraseña</label>
-                      <input type="password" placeholder="Escribe tu contraseña" name="contraseña" required>
-                  
-                      <button type="submit">Iniciar sesión</button>
-                      <label class="check-login">
-                        <input type="checkbox" checked="checked" name="remember"> Recuerda mi contraseña
-                      </label>
-                    </div>
-                  </form>
+  <div class="container">
+    <div class="contenedor-login">
+      <div class="login-container">
+        <h2>Inicia sesión</h2>
+        <p>Por favor use el correo electrónico y la contraseña proporcionada para acceder a la plataforma.</p>
+        <form  method="post">
+            <div class="form-group">
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" class="form-control" required>
             </div>
-        </div>
+            <div class="form-group">
+                <label for="contraseña">Contraseña</label>
+                <input type="password" id="contraseña" name="contraseña" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+        </form>
     </div>
+    </div>
+</div>
 
     <script src="https://cdn.jsdelivr.net/npm/@picocss/pico@1.5.10/css/postcss.config.min.js"></script>
 </body>
