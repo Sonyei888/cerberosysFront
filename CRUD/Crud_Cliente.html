@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/Estilos_crud.css">
+    <script src="/Scripts/Script_crud.js" defer></script>
+    <title>CRUD</title>
+</head>
+<body>
+    <div class="container">
+        <h1>CRUD</h1>
+        <form id="crudForm">
+            <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="apellido">Apellido</label>
+                <input type="text" id="apellido" required>
+            </div>
+            <div class="form-group">
+                <label for="correo">Correo</label>
+                <input type="email" id="correo" required>
+            </div>
+            <button type="submit" id="guardar">Guardar</button>
+            <button type="button" id="editar">Editar</button>
+            <button type="button" id="eliminar">Eliminar</button>
+        </form>
+        <ul id="listaUsuarios"></ul>
+    </div>
+</body>
+</html>
