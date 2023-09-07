@@ -1,33 +1,71 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" >
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/css/Estilos_crud.css">
-    <script src="/Scripts/Script_crud.js" defer></script>
+    <link rel="stylesheet" href="../css/Estilos_crud.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1.5.10/css/pico.min.css">
     <title>CRUD</title>
 </head>
 <body>
-    <div class="container">
-        <h1>CRUD</h1>
-        <form id="crudForm">
-            <div class="form-group">
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" required>
-            </div>
-            <div class="form-group">
-                <label for="apellido">Apellido</label>
-                <input type="text" id="apellido" required>
-            </div>
-            <div class="form-group">
-                <label for="correo">Correo</label>
-                <input type="email" id="correo" required>
-            </div>
-            <button type="submit" id="guardar">Guardar</button>
-            <button type="button" id="editar">Editar</button>
-            <button type="button" id="eliminar">Eliminar</button>
-        </form>
-        <ul id="listaUsuarios"></ul>
+    
+    <div class="container crud">
+        <div class="contenedor-login">
+          <div class="login-container">
+            <form  method="post">
+                
+                <nav>
+
+                    <div class="container">
+                        <h1>Crear Cliente</h1>
+                    </div>
+
+                    
+                    <ul>
+                    
+                      <li><a href="#" role="button">Atras</a></li>
+                    </ul>
+                  </nav>
+
+                <div class="grid">
+                    <label for="nombres">
+                        Nombres
+                        <input type="text" id="nombres" name="nombres" placeholder="Nombres" required>
+                      </label>
+                  
+                      <label for="apellidos">
+                        Apellidos
+                        <input type="text" id="lastname" name="lastname" placeholder="Apellidos" required>
+                      </label>
+                </div>
+
+                <div class="container">
+                    <label for="email">
+                        Correo electrónico
+                        <input type="email" id="email" name="email" placeholder="Correo Electronico" required>
+                </div>
+                
+
+                <button>Guardar Usuario</button>
+                <table>
+                    <thead>
+                        
+                      <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Apellido</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Acciones</th>
+                      </tr>
+                    </thead>
+                   
+                      </tr>
+                  </table>
+            </form>
+        </div>
+        </div>
     </div>
+
 </body>
 </html>
