@@ -1,0 +1,19 @@
+<h2>Lista clientes</h2>
+<table class="table table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Email</th>
+            <th>Fecha Registro</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let cliente of clientes">
+            <td>{{cliente.nombre}}</td>
+            <td>{{cliente.apellido}}</td>
+            <td>{{cliente.email}}</td>
+            <td>{{cliente.fecha_registro}}</td>
+        </tr>
+    </tbody>
+</table>
