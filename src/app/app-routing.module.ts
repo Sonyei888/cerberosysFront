@@ -10,7 +10,7 @@ const routes: Routes = [
   {path : '', redirectTo:'clientes', pathMatch:'full'},
   {path : 'registrar-cliente', component: RegistrarClienteComponent},
   {path : 'actualizar-cliente/:id', component : ActualizarClienteComponent},
-  {path: 'cliente-detalles', component: ClienteDetallesComponent}
+  {path: 'cliente-detalles/:id', component: ClienteDetallesComponent}
 
 ];
 

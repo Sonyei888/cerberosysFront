@@ -37,5 +37,9 @@ private obtenerClientes(){
 
 }
 
+verDetallesCliente(id:number){
+    this.router.navigate(['cliente-detalles',id]);
+  }
+
 }
 

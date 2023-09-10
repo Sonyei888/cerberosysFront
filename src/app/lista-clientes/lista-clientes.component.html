@@ -17,7 +17,8 @@
             <td>{{cliente.fecha_registro}}</td>
             <td>
                 <button (click)= "actualizarCliente(cliente.id)" class="btn btn-info">Editar</button>
-                <button (click)= "eliminarCliente(cliente.id)" class="btn btn-info" style="margin-left : 10px;">Eliminar</button>
+                <button (click)= "eliminarCliente(cliente.id)" class="btn btn-danger" style="margin-left : 10px;">Eliminar</button>
+                <button (click)= "verDetallesCliente(cliente.id)" class="btn btn-primary" style="margin-left : 10px;">Detalles</button>
             </td>
         </tr>
     </tbody>
