@@ -18,7 +18,11 @@
     "@angular/platform-browser": "^16.2.0",
     "@angular/platform-browser-dynamic": "^16.2.0",
     "@angular/router": "^16.2.0",
+    "@angular/service-worker": "^16.2.0",
+    "@christianacca/angular-swa-auth": "^2.2.0",
     "rxjs": "~7.8.0",
+    "swa": "^0.1.1",
+    "sweetalert2": "^11.7.27",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"
   },

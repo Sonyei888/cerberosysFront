@@ -13,9 +13,33 @@ export class ClienteService {
 
   constructor(private httpClient : HttpClient) { }
 
-  //obtener los clientes
-  obtenerListaDeEmpleados():Observable<Cliente[]>{
+  // obtener los clientes
+
+  obtenerListaDeClientes():Observable<Cliente[]>{
     return this.httpClient.get<Cliente[]>(`${this.baseURL}`);
   }
- 
+
+  //registrar un clientes
+
+  registrarCliente(cliente:Cliente) : Observable<Object>{
+    return this.httpClient.post(`${this.baseURL}`,cliente);
+  }
+
+  //actualizar el clientes
+
+  actualizarCliente(id:number,cliente:Cliente) : Observable<Object>{
+    return this.httpClient.put(`${this.baseURL}/${id}`,cliente);
+  }
+
+  //obtener o buscar un clientes
+
+  obtenerClientePorId(id:number):Observable<Cliente>{
+    return this.httpClient.get<Cliente>(`${this.baseURL}/${id}`);
+  }
+
+
+  eliminarCliente(id:number): Observable<Object>{
+    return this.httpClient.delete(`${this.baseURL}/${id}`);
+  }
+
 }

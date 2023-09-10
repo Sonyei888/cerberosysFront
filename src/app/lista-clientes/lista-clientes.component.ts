@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Cliente } from '../cliente';
 import { ClienteService } from '../cliente.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-lista-clientes',
@@ -11,15 +12,30 @@ export class ListaClientesComponent {
 
   clientes:Cliente[];
 
-  constructor(private clienteServicio:ClienteService) { }
+  constructor(private clienteServicio:ClienteService, private router:Router) { }
 
   ngOnInit(): void{
     this.obtenerClientes();
   }
 
-  private obtenerClientes(){
-    this.clienteServicio.obtenerListaDeEmpleados().subscribe(dato => {
-      this.clientes = dato;
-    });
-  }
+actualizarCliente(id:number){
+this.router.navigate(['actualizar-cliente', id]);
 }
+
+
+eliminarCliente(id:number){
+    this.clienteServicio.eliminarCliente(id).subscribe(dato => {
+    console.log(dato);
+    this.obtenerClientes();
+  });
+}
+
+private obtenerClientes(){
+  this.clienteServicio.obtenerListaDeClientes().subscribe(dato=>{
+  this.clientes = dato;
+  });
+
+}
+
+}
+

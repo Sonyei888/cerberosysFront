@@ -6,14 +6,19 @@
             <th>Apellido</th>
             <th>Email</th>
             <th>Fecha Registro</th>
+            <th>Acciones</th>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let cliente of clientes">
+        <tr *ngFor= "let cliente of clientes">
             <td>{{cliente.nombre}}</td>
             <td>{{cliente.apellido}}</td>
             <td>{{cliente.email}}</td>
             <td>{{cliente.fecha_registro}}</td>
+            <td>
+                <button (click)= "actualizarCliente(cliente.id)" class="btn btn-info">Editar</button>
+                <button (click)= "eliminarCliente(cliente.id)" class="btn btn-info" style="margin-left : 10px;">Eliminar</button>
+            </td>
         </tr>
     </tbody>
 </table>
