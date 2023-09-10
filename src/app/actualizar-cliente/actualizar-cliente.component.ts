@@ -25,7 +25,7 @@ export class ActualizarClienteComponent implements OnInit {
   }
 
   irAlaListaDeEmpleados() {
-    swal.fire('Cliente actualizado', `El cliente ${this.cliente.nombre} ha sido actualizado con éxito`, 'success').then(() => {
+    swal('Cliente actualizado', `El cliente ${this.cliente.nombre} ha sido actualizado con éxito`, 'success').then(() => {
       this.router.navigate(['/clientes']);
     });
   }

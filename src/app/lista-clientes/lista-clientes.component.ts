@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Cliente } from '../cliente';
+import  swal  from 'sweetalert2';
 import { ClienteService } from '../cliente.service';
 import { Router } from '@angular/router';
 
@@ -24,10 +25,31 @@ this.router.navigate(['actualizar-cliente', id]);
 
 
 eliminarCliente(id:number){
-    this.clienteServicio.eliminarCliente(id).subscribe(dato => {
-    console.log(dato);
-    this.obtenerClientes();
-  });
+  swal({
+    title: '¿Estas seguro?',
+    text: "Confirma si deseas eliminar al cliente",
+    type: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Si , elimínalo',
+    cancelButtonText: 'No, cancelar',
+    confirmButtonClass: 'btn btn-success',
+    cancelButtonClass: 'btn btn-danger',
+    buttonsStyling: true
+  }).then((result) => {
+    if(result.value){
+      this.clienteServicio.eliminarCliente(id).subscribe(dato => {
+        console.log(dato);
+        this.obtenerClientes();
+        swal(
+          'Empleado eliminado',
+          'El empleado ha sido eliminado con exito',
+          'success'
+        )
+      })
+    }
+  })
 }
 
 private obtenerClientes(){

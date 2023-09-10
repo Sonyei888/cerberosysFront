@@ -16,6 +16,7 @@ ngOnInit(): void{
 
 }
 
+
 guardarCliente(){
   this.clienteServicio.registrarCliente(this.cliente).subscribe(dato => {
     console.log(dato);

@@ -1,60 +1,57 @@
 <div class="col-md-6 offset-md-3">
-    <h3 class="text-center">Edición de cliente</h3>
-    <form (ngSubmit)="onSubmit()">
-        <div class="form-group">
-            <label>Nombre:</label>
-            <input type="text"
-                class="form-control"
-                id="nombre"
-                [(ngModel)]="cliente.nombre"
-                name="nombre"
-                required
-                minlength="4"
-                maxlength="10"
-                placeholder="Digite su nombre"
-                #nombre="ngModel">
-        </div> <!-- Cierre del div form-group -->
-
-        <div class="form-group">
-            <label>Apellido:</label>
-            <input type="text"
-                class="form-control"
-                id="apellido"
-                [(ngModel)]="cliente.apellido"
-                name="apellido"
-                required
-                minlength="4"
-                maxlength="10"
-                placeholder="Digite su apellido"
-                #apellido="ngModel">
-        </div> <!-- Cierre del div form-group -->
-
-        <div class="form-group">
-            <label>Email:</label>
-            <input type="email"
-                class="form-control"
-                id="email"
-                [(ngModel)]="cliente.email"
-                name="email"
-                pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}"
-                required
-                placeholder="Digite su email"
-                #email="ngModel">
+  <h3 class="text-center">Edición de empleado</h3>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="nombre">Nombre:</label>
+      <input type="text" name="nombre" id="nombre" class="form-control" [(ngModel)]="cliente.nombre" required minlength="3" maxlength="50"
+        placeholder="Ingrese su nombre" #nombre="ngModel">
+      <div class="alert alert-danger" *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)">
+        <div *ngIf="nombre.errors">
+          Digite su nombre por favor
         </div>
-        <div class="form-group">
-            <label>Fecha Registro:</label>
-            <input type="date"
-                class="form-control"
-                id="fecha"
-                [(ngModel)]="cliente.fecha_registro"
-                name="fecha_registro"
-                required
-                minlength="4"
-                maxlength="10"
-                placeholder="Digite la fecha registro"
-                #fecha_registro="ngModel">
-        </div>  <!-- Cierre del div form-group -->
+        <div *ngIf="nombre.errors">
+          El nombre debe tener al menos 3 caracteres.
+        </div>
+        <div *ngIf="nombre.errors">
+          El nombre no debe tener más de 50 caracteres.
+        </div>
+      </div>
+    </div>
 
-        <button class="btn btn-success">Guardar</button>
-    </form>
+    <div class="form-group">
+      <label for="apellido">Apellido:</label>
+      <input type="text" name="apellido" id="apellido" class="form-control" [(ngModel)]="cliente.apellido" required
+        minlength="3" maxlength="50" placeholder="Ingrese su apellido" #apellido="ngModel">
+      <div class="alert alert-danger" *ngIf="apellido.invalid && (apellido.dirty || apellido.touched)">
+        <div *ngIf="apellido.errors">
+          Digite su apellido por favor
+        </div>
+        <div *ngIf="apellido.errors">
+          El apellido debe tener al menos 3 caracteres.
+        </div>
+        <div *ngIf="apellido.errors">
+          El apellido no debe tener más de 50 caracteres.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email" class="form-control" [(ngModel)]="cliente.email" required
+       placeholder="Ingrese su correo electrónico" #email="ngModel" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+
+       <div class="alert alert-danger" *ngIf="email.invalid && (email.dirty || email.touched)">
+        <div *ngIf="email.errors">
+          Digite su Email por favor
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="fecha_registro">Fecha:</label>
+      <input type="date" name="fecha_registro" id="fecha_registro" class="form-control" [(ngModel)]="cliente.fecha_registro" required>
+    </div>
+
+    <button class="btn btn-success">Enviar</button>
+  </form>
 </div>
