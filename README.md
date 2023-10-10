@@ -1,27 +1,35 @@
-# ClientesFrontend
+# Módulo de POS
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.1.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+  Requisitos funcionales:
+  
+    ✓ El sistema debe poder procesar transacciones de ventas de forma rápida y eficiente.
+    ✓ El sistema debe poder gestionar el inventario de productos, incluidos los niveles de
+    existencias, los precios y las promociones.
+    ✓ El sistema debe poder gestionar los datos de los clientes, incluidos los nombres, las
+    direcciones, los números de teléfono y las preferencias de compra.
+    ✓ El sistema debe poder generar informes de ventas, inventario y clientes.
+    ✓ El sistema debe poder integrarse con otros sistemas, como los sistemas de contabilidad y
+    gestión de relaciones con los clientes (CRM).
+    ✓ El sistema debe ser seguro y proteger los datos de los clientes y del negocio.
+    ✓ El sistema debe ser fácil de usar y navegar.
+    ✓ El sistema debe ser personalizable para satisfacer las necesidades específicas de cada
+    negocio.
+    ✓ El sistema debe ofrecer soporte al cliente para ayudar a los usuarios a resolver cualquier
+    problema que puedan tener.
+    ✓ El sistema debe ser asequible y rentable para el negocio.
+  
+  Requisitos no funcionales:
+  
+    ✓ El sistema debe ser capaz de manejar un alto volumen de transacciones.
+    ✓ El sistema debe ser capaz de funcionar en una variedad de entornos, incluyendo entornos
+    de tienda y de oficina.
+    ✓ El sistema debe ser capaz de soportar una variedad de dispositivos, incluyendo
+    computadoras de escritorio, laptops, tablets y smartphones.
+    ✓ El sistema debe ser capaz de cumplir con los requisitos legales y reglamentarios aplicables.
+    ✓ El sistema debe ser capaz de escalar para satisfacer las necesidades del negocio a medida
+    que crezca.
+    ✓ El sistema debe ser capaz de soportar cambios y actualizaciones.
+    ✓ El sistema debe ser confiable y seguro.
+    ✓ El sistema debe ser fácil de mantener y reparar.
+    ✓ El sistema debe ser eficiente en el uso de los recursos.
+  ✓ El sistema debe ser atractivo y fácil de usar
